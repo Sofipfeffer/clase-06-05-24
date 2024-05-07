@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --primary-color: rgb(174, 174, 174);
+    --secondary-color: rgb(78, 161, 194);
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 40px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+section {
+    padding: 40px;
+    min-height: 100vh;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/assets/Imagen\ 31.png);
+    background-size: cover;
+    color: white;
+}
+
+#banner h1 {
+    font-size: 40px;
+}
+
+#banner p {
+    width: 70%;
+}
+
+#projects,
+#education {
+    text-align: center;
+}
+
+#projects h2,
+#education h2,
+#contact h2 {
+    font-size: 30px;
+}
+
+#projects .container-grid-projects,
+#education .container-grid-education {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+#projects .card,
+#education .card {
+    background-color: var(--primary-color);
+    padding: 30px;
+    box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    transition: 0.3 transform;
+    margin: 10px;
+}
+
+#projects .card:hover,
+#education .card a {
+    transform: scale(1.03);
+}
+
+#projects .card a,
+#education .card a {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    padding: 5px;
+    margin: 10px auto;
+    width: 50%;
+    display: block;
+    color: white;
+    border-radius: 5px;
+}
+
+#education {
+    background-color: azure;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form * {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+}
+
+form {
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+form input,
+textarea {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#contact button {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 5px;
+    margin: 10px auto;
+    width: 50%;
+    display: block;
+    color: white;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 880px) {
+
+    #projects .container-grid-projects,
+    #education .container-grid-education {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    #projects .container-grid-projects,
+    #education .container-grid-education {
+        grid-template-columns: 1fr;
+    }
+}
